@@ -53,7 +53,7 @@ def wrangle_zillow(path):
 
     # Assign variables
     # x df's are all numeric cols 
-    X_train_explore = train.drop(columns=['taxvaluedollarcnt'])
+    X_train_explore = train
     X_train = train.drop(columns=['taxvaluedollarcnt','zip','useid',"yearbuilt"])
     X_validate = validate.drop(columns=['taxvaluedollarcnt','zip','useid',"yearbuilt"])
     X_test = test.drop(columns=['taxvaluedollarcnt','zip','useid',"yearbuilt"])
