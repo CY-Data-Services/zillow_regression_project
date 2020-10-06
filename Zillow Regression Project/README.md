@@ -40,7 +40,7 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 ```
 
 ## Data Dictionary
-
+  ---                            ---
 | **Feature**                  | **Definition**            |
 | ---                          | ---                       |
 | bathroomcnt                  | # of bathrooms in home    |
@@ -48,9 +48,15 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 | calculatedfinishedsquarefeet | calculated square footage |
 | fireplace                    | 1 : Yes, 0 : No           |
 | garage                       | 1 : Yes, 0 : No           |
-| hot
+| hottub_spa                   | 1 : Yes, 0 : No           |
+| lotsizesquarefeet            | lot size in square feet   |
+| poolcnt                      | 1 : Yes, 0 : No           |
+| roomcnt                      | # of rooms in home        |
+| year                         | year of construction      |
+| zip                          | zip code                  |
+| useid                        | property land use code    |
 
-
-| Target | Definition |
-| --- | --- |
-| Target 1 | Definition 1 |
+  ---                            ---
+| **Target**                   | **Definition**            |
+| ---                          | ---                       |
+| taxvaluedollarcnt            | Tax value in Dollars      |
