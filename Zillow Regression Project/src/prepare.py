@@ -13,6 +13,7 @@ def wrangle_zillow(path):
     df = pd.read_csv(path)
     # Rename columns for clarity
     df.rename(columns={"hashottuborspa":"hottub_spa","fireplacecnt":"fireplace","garagecarcnt":"garage"}, inplace = True)
+    df.rename(columns = {'Unnamed: 0':'delete', 'id.1':'delete1'}, inplace = True)
 
     # Replaces NaN values with 0
     df['garage'] = df['garage'].replace(np.nan, 0)
@@ -36,10 +37,15 @@ def wrangle_zillow(path):
     df.drop(columns= ['calculatedbathnbr','decktypeid','finishedfloor1squarefeet','finishedsquarefeet12','finishedsquarefeet13','finishedsquarefeet15'], inplace = True)
     df.drop(columns= ['finishedsquarefeet50','finishedsquarefeet6','fips','fullbathcnt','heatingorsystemtypeid','poolsizesum','pooltypeid10','pooltypeid2'], inplace = True)
     df.drop(columns= ['pooltypeid7','propertycountylandusecode','propertyzoningdesc','rawcensustractandblock','regionidcity','regionidcounty','regionidneighborhood'], inplace = True)
-    df.drop(columns= ['storytypeid','threequarterbathnbr','typeconstructiontypeid','unitcnt','yardbuildingsqft17','yardbuildingsqft26','numberofstories'], inplace = True)
+    df.drop(columns= ['storytypeid','threequarterbathnbr','typeconstructiontypeid','unitcnt','yardbuildingsqft17','yardbuildingsqft26', 'numberofstories'], inplace = True)
     df.drop(columns= ['fireplaceflag','structuretaxvaluedollarcnt','assessmentyear','landtaxvaluedollarcnt','taxamount','taxdelinquencyflag','taxdelinquencyyear'], inplace = True)
     df.drop(columns= ['censustractandblock','logerror','transactiondate','garagetotalsqft','latitude','longitude',"regionidzip","propertylandusetypeid"], inplace = True)
-    df.drop(labels=[1600, 1628, 5099, 5969, 8109, 8407, 8521, 8849, 11562, 12430, 14313, 20313, 21502], axis=0)
+    df.drop(columns = ['delete','delete1'], inplace = True)
+
+    # Rows to drop
+    rows_to_remove = [1600, 1628, 5099, 5969, 8109, 8407, 8521, 8849, 11562, 12430, 14313, 20313, 21502]
+    df = df[~df.index.isin(rows_to_remove)]
+    
     # Problem 'bedbathratio' - New Feature (Ratio of bedroomcnt and bathroomcnt)
     #df['bedbathratio'] = df.bedroomcnt.div(df.bathroomcnt, axis=0)
 
