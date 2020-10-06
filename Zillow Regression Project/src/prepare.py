@@ -21,12 +21,17 @@ def wrangle_zillow(path):
     df['poolcnt'] = df['poolcnt'].replace(np.nan, 0)
     df['fireplace'] = df['fireplace'].replace(np.nan, 0)
         
-    ## Add dummy variables as new columns in dataframe and rename them, delete origional
+    ## Convert to Category
     df["zip"] = df["regionidzip"].astype('category')
-
-    ## Add dummy variables as new columns in dataframe and rename them, delete origional
     df["useid"]= df["propertylandusetypeid"].astype('category')
+    df["year"]= df["yearbuilt"].astype('category')
 
+    # Add Category Codes
+    df["zip_cc"] = df["zip"].cat.codes
+    df["useid_cc"] = df["useid"].cat.codes
+    df["year_cc"] = df["year"].cat.codes
+
+    # Columns to drop
     df.drop(columns= ['parcelid','id','airconditioningtypeid','architecturalstyletypeid','basementsqft','buildingclasstypeid','buildingqualitytypeid'], inplace = True)
     df.drop(columns= ['calculatedbathnbr','decktypeid','finishedfloor1squarefeet','finishedsquarefeet12','finishedsquarefeet13','finishedsquarefeet15'], inplace = True)
     df.drop(columns= ['finishedsquarefeet50','finishedsquarefeet6','fips','fullbathcnt','heatingorsystemtypeid','poolsizesum','pooltypeid10','pooltypeid2'], inplace = True)
@@ -49,9 +54,9 @@ def wrangle_zillow(path):
     # Assign variables
     # x df's are all numeric cols 
     X_train_explore = train.drop(columns=['taxvaluedollarcnt'])
-    X_train = train.drop(columns=['taxvaluedollarcnt','zip','useid'])
-    X_validate = validate.drop(columns=['taxvaluedollarcnt','zip','useid'])
-    X_test = test.drop(columns=['taxvaluedollarcnt','zip','useid'])
+    X_train = train.drop(columns=['taxvaluedollarcnt','zip','useid',"yearbuilt"])
+    X_validate = validate.drop(columns=['taxvaluedollarcnt','zip','useid',"yearbuilt"])
+    X_test = test.drop(columns=['taxvaluedollarcnt','zip','useid',"yearbuilt"])
 
     # y df's are just fertility
     y_train = train[['taxvaluedollarcnt']]
