@@ -41,10 +41,15 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 
 ## Data Dictionary
 
-| Feature | Definition |
-| --- | --- |
-| Feature 1 | Definition 1 |
-| Feature 2 | Definition 2 |
+| **Feature**                  | **Definition**            |
+| ---                          | ---                       |
+| bathroomcnt                  | # of bathrooms in home    |
+| bedroomcnt                   | # of bedrooms in home     |
+| calculatedfinishedsquarefeet | calculated square footage |
+| fireplace                    | 1 : Yes, 0 : No           |
+| garage                       | 1 : Yes, 0 : No           |
+| hot
+
 
 | Target | Definition |
 | --- | --- |
