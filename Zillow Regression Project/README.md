@@ -3,15 +3,12 @@
 ### Author: Corey Solitaire, Ryvyn Young
 ***
 ## Description: 
-Zillow Regression Project
+- Build, fit, and train a regression model to predict tax assessed home value
 ***
 ## Instructions for Replication
 Files are located in Git Repo [here](https://github.com/CY-Data-Services/zillow_regression_project)
 User will need env.py file with access to Codeup database
 acquire.py and prepare.py files need to be run in order they occur in notebook 
-***
-## Goal: 
-- Build, fit, and train a regression model to predict tax assessed home value
 ***
 ## Background:
 
