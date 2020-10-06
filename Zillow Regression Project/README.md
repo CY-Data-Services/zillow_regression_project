@@ -3,10 +3,30 @@
 ### Author: Corey Solitaire, Ryvyn Young
 
 ## Description: 
-Zillow Regression Project
+- Build, fit, and train a regression model to predict tax assessed home value
+
+## Instructions for Replication
+Files are located in Git Repo [here](https://github.com/CY-Data-Services/zillow_regression_project)
+User will need env.py file with access to Codeup database
+acquire.py and prepare.py files need to be run in order they occur in notebook 
+
+## Background:
+
+
+**What is a single unit property?**
+
+By James Chen Updated Sep 11, 2020 What Is a Housing Unit?
+
+The term housing unit refers to a single unit within a larger structure that can be used by an individual or household to eat, sleep, and live. The unit can be in any type of residence such as a house, apartment, mobile home, or may also be a single unit in a group of rooms. Essentially, a housing unit is deemed to be a separate living quarter where the occupants live and eat separately from other residents of the structure or building. They also have direct access from the building's exterior or through a common hallway.
+- https://www.investopedia.com/terms/h/housingunits.asp
+
+## Key Findings
+
+
+###### Next Steps    
+
 
 ## Project Organization
-
 Generated with [ryans_codeup_data_science_mvp](https://github.com/RyanMcCall/ryans_codeup_data_science_mvp)
 
 Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
@@ -40,7 +60,7 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 ```
 
 ## Data Dictionary
-
+  ---                            ---
 | **Feature**                  | **Definition**            |
 | ---                          | ---                       |
 | bathroomcnt                  | # of bathrooms in home    |
@@ -48,9 +68,59 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 | calculatedfinishedsquarefeet | calculated square footage |
 | fireplace                    | 1 : Yes, 0 : No           |
 | garage                       | 1 : Yes, 0 : No           |
-| hot
+| hottub_spa                   | 1 : Yes, 0 : No           |
+| lotsizesquarefeet            | lot size in square feet   |
+| poolcnt                      | 1 : Yes, 0 : No           |
+| roomcnt                      | # of rooms in home        |
+| year                         | year of construction      |
+| zip                          | zip code                  |
+| useid                        | property land use code    |
 
+  ---                            ---
+| **Target**                   | **Definition**            |
+| ---                          | ---                       |
+| taxvaluedollarcnt            | Tax value in Dollars      |
+***
+## Planning Stage
+Project Description: 
+- This project looks to predict home price between the month of May and June 2017 using a variety of home features
+  found on the zillow 
 
-| Target | Definition |
-| --- | --- |
-| Target 1 | Definition 1 |
+GOALS:
+- Need a way to predict the values of single unit properties between the months of May and June 2017.
+
+MVP Questions to answer:
+- What are the drivers of single unit property values (Model Features)
+- How do you know that these drivers have signficiance (Significance Tests)
+
+Audience: 
+- Zillow Data Science Team 
+
+Setting: 
+- Professional
+
+Brainstorm: 
+
+## Acquire Stage
+DELIVERABLES: 
+- Acquire a df of single unit property values between May and June 2017
+- Define single unit property
+
+## Preparation Stage
+DELIVERABLES:
+- Clean dataset that is split and scaled in to train, validate, and test
+
+## Exploration and Pre-Processing Stage
+DELIVERABLES: 
+- Distribution of Tax Rates per County 
+- Data Visualization
+- Statistical Test
+  - Chi Squared Test for Independence 
+
+## Modeling Stage
+DELIVERABLES: 
+- Regression model built on property data between May and June 2017
+
+## Delivery Stage
+DELIVERABLES: 
+- Presentation (3-5 Slides) in Tableau
