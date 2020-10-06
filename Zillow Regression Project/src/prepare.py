@@ -39,7 +39,7 @@ def wrangle_zillow(path):
     df.drop(columns= ['pooltypeid7','propertycountylandusecode','propertyzoningdesc','rawcensustractandblock','regionidcity','regionidcounty','regionidneighborhood'], inplace = True)
     df.drop(columns= ['storytypeid','threequarterbathnbr','typeconstructiontypeid','unitcnt','yardbuildingsqft17','yardbuildingsqft26', 'numberofstories'], inplace = True)
     df.drop(columns= ['fireplaceflag','structuretaxvaluedollarcnt','assessmentyear','landtaxvaluedollarcnt','taxamount','taxdelinquencyflag','taxdelinquencyyear'], inplace = True)
-    df.drop(columns= ['censustractandblock','logerror','transactiondate','garagetotalsqft','latitude','longitude',"regionidzip","propertylandusetypeid"], inplace = True)
+    df.drop(columns= ['censustractandblock','logerror','transactiondate','garagetotalsqft','latitude','longitude',"yearbuilt","regionidzip","propertylandusetypeid"], inplace = True)
     df.drop(columns = ['delete','delete1'], inplace = True)
 
     # Rows to drop
@@ -60,9 +60,9 @@ def wrangle_zillow(path):
     # Assign variables
     # x df's are all numeric cols 
     X_train_explore = train
-    X_train = train.drop(columns=['taxvaluedollarcnt','zip','useid',"yearbuilt"])
-    X_validate = validate.drop(columns=['taxvaluedollarcnt','zip','useid',"yearbuilt"])
-    X_test = test.drop(columns=['taxvaluedollarcnt','zip','useid',"yearbuilt"])
+    X_train = train.drop(columns=['taxvaluedollarcnt','zip','useid',"year"])
+    X_validate = validate.drop(columns=['taxvaluedollarcnt','zip','useid',"year"])
+    X_test = test.drop(columns=['taxvaluedollarcnt','zip','useid',"year"])
 
     # y df's are just fertility
     y_train = train[['taxvaluedollarcnt']]
