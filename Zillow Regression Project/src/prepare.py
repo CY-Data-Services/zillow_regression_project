@@ -80,6 +80,7 @@ def wrangle_zillow(path):
     X_test_scaled = pd.DataFrame(X_test_scaled, 
                                     columns=X_test.columns.values).\
                                 set_index([X_test.index.values])
+
     return df, X_train_explore, X_train_scaled, y_train, X_validate_scaled, y_validate, X_test_scaled, y_test
 
 
