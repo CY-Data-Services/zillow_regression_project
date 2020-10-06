@@ -23,7 +23,7 @@ def new_zillow_data():
                 from properties_2017
                 join unique_properties using (parcelid)
                 join predictions_2017 using (parcelid)
-                WHERE transactiondate between '2017-06-01' AND '2017-07-31'
+                WHERE transactiondate between '2017-05-01' AND '2017-06-30'
                 AND propertylandusetypeid IN ('246','247','248','260','261','262','263','264','265','266','268','269','273','274','275','276','279');
                 '''
     df = pd.read_sql(sql_query, get_connection('zillow'))
