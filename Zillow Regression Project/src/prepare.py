@@ -39,7 +39,7 @@ def wrangle_zillow(path):
     df.drop(columns= ['pooltypeid7','propertycountylandusecode','propertyzoningdesc','rawcensustractandblock','regionidcity','regionidcounty','regionidneighborhood'], inplace = True)
     df.drop(columns= ['storytypeid','threequarterbathnbr','typeconstructiontypeid','unitcnt','yardbuildingsqft17','yardbuildingsqft26', 'numberofstories'], inplace = True)
     df.drop(columns= ['fireplaceflag','structuretaxvaluedollarcnt','assessmentyear','landtaxvaluedollarcnt', 'taxdelinquencyflag','taxdelinquencyyear'], inplace = True)
-    df.drop(columns= ['censustractandblock','logerror','transactiondate','garagetotalsqft', "yearbuilt", "regionidzip", "propertylandusetypeid"], inplace = True)
+    df.drop(columns= ['censustractandblock','logerror','transactiondate','garagetotalsqft', "yearbuilt", "regionidzip", "propertylandusetypeid",'delete','delete1'], inplace = True)
 
     # Rows to drop
     rows_to_remove = [1600, 1628, 5099, 5969, 8109, 8407, 8521, 8849, 11562, 12430, 14313, 20313, 21502]
