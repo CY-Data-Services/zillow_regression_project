@@ -35,11 +35,11 @@ def wrangle_zillow(path):
     # Columns to drop
     df.drop(columns= ['parcelid','id','airconditioningtypeid','architecturalstyletypeid','basementsqft','buildingclasstypeid','buildingqualitytypeid'], inplace = True)
     df.drop(columns= ['calculatedbathnbr','decktypeid','finishedfloor1squarefeet','finishedsquarefeet12','finishedsquarefeet13','finishedsquarefeet15'], inplace = True)
-    df.drop(columns= ['finishedsquarefeet50','finishedsquarefeet6','fips','fullbathcnt','heatingorsystemtypeid','poolsizesum','pooltypeid10','pooltypeid2'], inplace = True)
+    df.drop(columns= ['finishedsquarefeet50','finishedsquarefeet6', 'fullbathcnt','heatingorsystemtypeid','poolsizesum','pooltypeid10','pooltypeid2'], inplace = True)
     df.drop(columns= ['pooltypeid7','propertycountylandusecode','propertyzoningdesc','rawcensustractandblock','regionidcity','regionidcounty','regionidneighborhood'], inplace = True)
     df.drop(columns= ['storytypeid','threequarterbathnbr','typeconstructiontypeid','unitcnt','yardbuildingsqft17','yardbuildingsqft26', 'numberofstories'], inplace = True)
-    df.drop(columns= ['fireplaceflag','structuretaxvaluedollarcnt','assessmentyear','landtaxvaluedollarcnt','taxamount','taxdelinquencyflag','taxdelinquencyyear'], inplace = True)
-    df.drop(columns= ['censustractandblock','logerror','transactiondate','garagetotalsqft','latitude','longitude',"yearbuilt","regionidzip","propertylandusetypeid"], inplace = True)
+    df.drop(columns= ['fireplaceflag','structuretaxvaluedollarcnt','assessmentyear','landtaxvaluedollarcnt', 'taxdelinquencyflag','taxdelinquencyyear'], inplace = True)
+    df.drop(columns= ['censustractandblock','logerror','transactiondate','garagetotalsqft', "yearbuilt", "regionidzip", "propertylandusetypeid"], inplace = True)
     df.drop(columns = ['delete','delete1'], inplace = True)
 
     # Rows to drop
@@ -59,10 +59,10 @@ def wrangle_zillow(path):
 
     # Assign variables
     # x df's are all numeric cols 
-    X_train_explore = train
-    X_train = train.drop(columns=['taxvaluedollarcnt','zip','useid',"year"])
-    X_validate = validate.drop(columns=['taxvaluedollarcnt','zip','useid',"year"])
-    X_test = test.drop(columns=['taxvaluedollarcnt','zip','useid',"year"])
+    X_train = train.drop(columns=['taxvaluedollarcnt','zip','useid',"year", 'taxamount', 'fips', 'latitude', 'longitude'])
+    X_validate = validate.drop(columns=['taxvaluedollarcnt','zip','useid',"year", 'taxamount', 'fips', 'latitude', 'longitude'])
+    X_test = test.drop(columns=['taxvaluedollarcnt','zip','useid',"year", 'taxamount', 'fips', 'latitude', 'longitude'])
+    X_train_explore = X_train
 
     # y df's are just fertility
     y_train = train[['taxvaluedollarcnt']]
