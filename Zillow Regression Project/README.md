@@ -3,7 +3,7 @@
 ### Author: Corey Solitaire, Ryvyn Young
 
 ## Description: 
-- Build, fit, and train a regression model to predict tax assessed home value
+- Build, fit, and train a regression model to predict single unit property tax assessment value
 
 ## Instructions for Replication
 Files are located in Git Repo [here](https://github.com/CY-Data-Services/zillow_regression_project)
