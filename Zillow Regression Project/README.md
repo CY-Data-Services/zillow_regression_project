@@ -128,7 +128,6 @@ DELIVERABLES:
 DELIVERABLES: 
 - Presentation (3-5 Slides) in Tableau
 - Additional Information Notebook
-  - Answer these questions from the customer:
   1. What state and county are these properties in?
   2. What is the distribution of tax rates for each county?
   3. What is the tax rate for each property?
