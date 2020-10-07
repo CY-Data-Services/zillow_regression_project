@@ -40,7 +40,6 @@ def wrangle_zillow(path):
     df.drop(columns= ['storytypeid','threequarterbathnbr','typeconstructiontypeid','unitcnt','yardbuildingsqft17','yardbuildingsqft26', 'numberofstories'], inplace = True)
     df.drop(columns= ['fireplaceflag','structuretaxvaluedollarcnt','assessmentyear','landtaxvaluedollarcnt', 'taxdelinquencyflag','taxdelinquencyyear'], inplace = True)
     df.drop(columns= ['censustractandblock','logerror','transactiondate','garagetotalsqft', "yearbuilt", "regionidzip", "propertylandusetypeid"], inplace = True)
-    df.drop(columns = ['delete','delete1'], inplace = True)
 
     # Rows to drop
     rows_to_remove = [1600, 1628, 5099, 5969, 8109, 8407, 8521, 8849, 11562, 12430, 14313, 20313, 21502]
@@ -62,7 +61,9 @@ def wrangle_zillow(path):
     X_train = train.drop(columns=['taxvaluedollarcnt','zip','useid',"year", 'taxamount', 'fips', 'latitude', 'longitude'])
     X_validate = validate.drop(columns=['taxvaluedollarcnt','zip','useid',"year", 'taxamount', 'fips', 'latitude', 'longitude'])
     X_test = test.drop(columns=['taxvaluedollarcnt','zip','useid',"year", 'taxamount', 'fips', 'latitude', 'longitude'])
-    X_train_explore = X_train
+    X_train_explore = train
+
+    # I need X_train_explore set to train so I have access to the target variable.
 
     # y df's are just fertility
     y_train = train[['taxvaluedollarcnt']]
