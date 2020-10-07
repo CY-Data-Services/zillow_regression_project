@@ -7,11 +7,9 @@
 
 ## Instructions for Replication
 Files are located in Git Repo [here](https://github.com/CY-Data-Services/zillow_regression_project)
-User will need env.py file with access to Codeup database
-acquire.py and prepare.py files need to be run in order they occur in notebook 
+User will need env.py file with access to Codeup database 
 
-## Background:
-
+## Domain Research:
 
 **What is a single unit property?**
 
@@ -19,6 +17,11 @@ By James Chen Updated Sep 11, 2020 What Is a Housing Unit?
 
 The term housing unit refers to a single unit within a larger structure that can be used by an individual or household to eat, sleep, and live. The unit can be in any type of residence such as a house, apartment, mobile home, or may also be a single unit in a group of rooms. Essentially, a housing unit is deemed to be a separate living quarter where the occupants live and eat separately from other residents of the structure or building. They also have direct access from the building's exterior or through a common hallway.
 - https://www.investopedia.com/terms/h/housingunits.asp
+
+**What is 'fips'?**
+This code is use to identify US counties by assigning a number to each county. To look up the county corresponding to the fips number in the dataset add the leading 0 and ignore the decimal. A chart of fips codes can be found [here](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697)
+- https://en.wikipedia.org/wiki/FIPS_county_code
+
 
 ## Key Findings
 
@@ -124,3 +127,10 @@ DELIVERABLES:
 ## Delivery Stage
 DELIVERABLES: 
 - Presentation (3-5 Slides) in Tableau
+- Additional Information Notebook
+  - Answer these questions from the customer:
+  1. What state and county are these properties in?
+  2. What is the distribution of tax rates for each county?
+  3. What is the tax rate for each property?
+  4. How much does the tax rate vary by county?
+  5. What tax rate do the bulk of properties sit around?
