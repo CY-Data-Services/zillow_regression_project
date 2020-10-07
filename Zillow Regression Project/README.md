@@ -24,6 +24,14 @@ This code is use to identify US counties by assigning a number to each county. T
 
 
 ## Key Findings
+1. Top 5 drivers of property tax assessment value (RMSE)
+- bathroomcnt
+- calculatedfinishedsquarefeet
+- bedroomcnt
+- garage
+- zip_cc
+
+2. Poly
 
 
 ###### Next Steps    
@@ -126,7 +134,7 @@ DELIVERABLES:
 
 ## Delivery Stage
 DELIVERABLES: 
-- Presentation (3-5 Slides) in Tableau
+- Presentation (3-5 Slides) in Google Slides
 - Additional Information Notebook
   1. What state and county are these properties in?
   2. What is the distribution of tax rates for each county?
