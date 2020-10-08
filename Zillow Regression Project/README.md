@@ -24,14 +24,51 @@ This code is use to identify US counties by assigning a number to each county. T
 
 
 ## Key Findings
-1. Top 5 drivers of property tax assessment value (RMSE)
+
+1. **Top 5 drivers of property tax assessment value (RMSE)**
 - bathroomcnt
 - calculatedfinishedsquarefeet
 - bedroomcnt
 - garage
 - zip_cc
 
-2. Poly
+2. **Top Model = Polynomial Features**
+- With 5 Features (above) and (degree = 2)
+- Avg. RMSE of $447039.41
+- 31% Improvement over baseline
+
+3. **Additional Reporting**
+- What state and county are these properties in?
+All properties are located in California, USA   
+06037 = Los Angles county   
+06059 = Orange county   
+06111 = Ventura county   
+
+- Tax Rate for each property
+Summary of Overall Tax Rate Information
+Min rate = .014%
+Max rate = 8.9%
+mean rate = 1.3%
+median rate = 1.2%
+
+- Distribution of tax rates for each county
+
+
+- How much does the tax rate vary by county?
+
+ 	        | count |	mean |	std |	min |	25% |	50% |	75% |	max
+---       |
+county 		|						
+---       |
+| LA 	    |  14141.0 	0.013700 	0.003834 	0.001071 	0.012086 	0.012509 	0.013936 	0.088893
+|---      |
+| Orange 	|  5878.0 	0.012051 	0.002683 	0.000141 	0.010519 	0.011534 	0.012590 	0.075801
+|---      |
+| Ventura |	1797.0 	0.011933 	0.002866 	0.000677 	0.010725 	0.011248 	0.011931 	0.062454
+---
+
+- What tax rate do the bulk of the properties sit around?
+
 
 
 ###### Next Steps    
