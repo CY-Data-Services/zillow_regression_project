@@ -82,22 +82,19 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 │   ├── prepared            <- The prepared datasets for exploration
 │   └── raw                 <- The original, immutable data
 │
-├── main.py                 <- The main python script that calls all src scripts
+├── main.py                 <- not used
 │
-├── mvp.ipynb               <- The main notebook for the project
+├── mvp.ipynb               <- The draft notebook for the project
 │
 ├── src                     <- The source code for use in this project
 │   ├── __init__.py         <- Makes src a Python module
 │   ├── acquire.py          <- The script to download or generate data and store it in
 │   │                          data/raw/
-│   ├── explore.py          <- The script for creating any visuals that need to be stored
-│   │                          in visuals/generated_graphics/
-│   ├── model.py            <- The script for preprocessing, modeling, and interpreting
 │   └── prepare.py          <- The script for preparing the raw data and storing it in
 │                              data/prepared/
 │
 └── visuals                 <- All project visuals
-    ├── external_visuals    <- Visuals brought from outside the project
+    ├── external_visuals    <- Visuals brought from outside the project, not used
     ├── generated_graphics  <- Visuals generated from the project
     └── presentation        <- A copy of your presentation
 ```
@@ -174,5 +171,5 @@ DELIVERABLES:
 ## Delivery Stage
 DELIVERABLES: 
 - [Presentation](https://docs.google.com/presentation/d/1O1oWwpjngXqnWylhtI1CFIcE8Nl13MardtJ5TaAJ7oo/edit?usp=sharing)
-- [Main_Notebook]()
-- [Additional_Information]()
+- [Main_Notebook](https://github.com/CY-Data-Services/zillow_regression_project/blob/main/Main_Notebook.ipynb)
+- [Additional_Information](https://github.com/CY-Data-Services/zillow_regression_project/blob/main/Additional_Information.ipynb)
