@@ -52,6 +52,7 @@ mean rate = 1.3%
 median rate = 1.2%
 
 - Distribution of tax rates for each county
+![](https://github.com/CY-Data-Services/zillow_regression_project/blob/main/Zillow%20Regression%20Project/visuals/generated_graphics/tax_by_county.png)
 
 
 - How much does the tax rate vary by county?
