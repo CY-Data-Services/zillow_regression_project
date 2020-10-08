@@ -125,7 +125,8 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 | year_cc                      | year of construction (.cat)                            |
 | zip_cc                       | zip code (.cat)                                        |
 | useid_cc                     | property land use code                                 |
-  ---                            ---                                                    |
+ 
+  ---                            ---                                                    
 | **Target**                   | **Definition**                                         |
 | ---                          | ---                                                    |
 | taxvaluedollarcnt            | Tax value in dollars                                   |
