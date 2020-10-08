@@ -104,25 +104,31 @@ Modified from [datasciencemvp](https://github.com/cliffclive/datasciencemvp/)
 
 ## Data Dictionary
   ---                            ---
-| **Feature**                  | **Definition**            |
-| ---                          | ---                       |
-| bathroomcnt                  | # of bathrooms in home    |
-| bedroomcnt                   | # of bedrooms in home     |
-| calculatedfinishedsquarefeet | calculated square footage |
-| fireplace                    | 1 : Yes, 0 : No           |
-| garage                       | 1 : Yes, 0 : No           |
-| hottub_spa                   | 1 : Yes, 0 : No           |
-| lotsizesquarefeet            | lot size in square feet   |
-| poolcnt                      | 1 : Yes, 0 : No           |
-| roomcnt                      | # of rooms in home        |
-| year                         | year of construction      |
-| zip                          | zip code                  |
-| useid                        | property land use code    |
-
-  ---                            ---
-| **Target**                   | **Definition**            |
-| ---                          | ---                       |
-| taxvaluedollarcnt            | Tax value in Dollars      |
+| **Feature**                  | **Definition**                                         |
+| ---                          | ---                                                    |
+| bathroomcnt                  | # of bathrooms in home                                 |
+| bedroomcnt                   | # of bedrooms in home                                  |
+| calculatedfinishedsquarefeet | calculated square footage                              |
+| garage                       | 1 : Yes, 0 : No                                        |
+| fips                         | Code to identify US counties                           |
+| fireplace                    | 1 : Yes, 0 : No                                        |
+| hottub_spa                   | 1 : Yes, 0 : No                                        |
+| latitude                     | Angular distance north or south of the earth's equator |
+| longitude                    | Geographic coordinate, east–west position on the Earth |
+| lotsizesquarefeet            | lot size in square feet                                |
+| poolcnt                      | 1 : Yes, 0 : No                                        |
+| roomcnt                      | # of rooms in home                                     |
+| taxamount 	                 | Amount paid in taxes in dollars                        |
+| year                         | year of construction                                   |
+| zip                          | zip code                                               |
+| useid                        | property land use code                                 |
+| year_cc                      | year of construction (.cat)                            |
+| zip_cc                       | zip code (.cat)                                        |
+| useid_cc                     | property land use code                                 |
+  ---                            ---                                                    |
+| **Target**                   | **Definition**                                         |
+| ---                          | ---                                                    |
+| taxvaluedollarcnt            | Tax value in dollars                                   |
 ***
 ## Planning Stage
 Project Description: 
