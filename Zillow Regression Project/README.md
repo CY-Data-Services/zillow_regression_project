@@ -11,8 +11,7 @@ User will need env.py file with access to Codeup database
 
 ## Domain Research:
 
-**What is a single unit property?**
-
+**What is a single unit property?**     
 By James Chen Updated Sep 11, 2020 What Is a Housing Unit?
 
 The term housing unit refers to a single unit within a larger structure that can be used by an individual or household to eat, sleep, and live. The unit can be in any type of residence such as a house, apartment, mobile home, or may also be a single unit in a group of rooms. Essentially, a housing unit is deemed to be a separate living quarter where the occupants live and eat separately from other residents of the structure or building. They also have direct access from the building's exterior or through a common hallway.
@@ -56,23 +55,18 @@ median rate = 1.2%
 
 
 - How much does the tax rate vary by county?
-
-
----       | count   |	mean |	std |	min |	25% |	50% |	75% |	max
-county 		|	---		  |	---	
----       |         |
-| LA 	    | 14141.0 | 0.013700 	0.003834 	0.001071 	0.012086 	0.012509 	0.013936 	0.088893
-|---      | ---     |
-| Orange 	| 5878.0 	| 0.012051 	0.002683 	0.000141 	0.010519 	0.011534 	0.012590 	0.075801
-|---      | ---     |
-| Ventura |	1797.0 	| 0.011933 	0.002866 	0.000677 	0.010725 	0.011248 	0.011931 	0.062454
----
+![](https://github.com/CY-Data-Services/zillow_regression_project/blob/main/Zillow%20Regression%20Project/visuals/generated_graphics/Screen%20Shot%202020-10-07%20at%208.51.30%20PM.png)
 
 - What tax rate do the bulk of the properties sit around?
+  - 1st quartile tax rate percentage: 1.16%
+  - 3rd quartile tax rate percentage: 1.35%
 
 
 
 ###### Next Steps    
+Investigate impact of further reducing outliers with regards to calculated tax rate   
+Investigate impact of feature engineering using combine features    
+  - Example: combine bedrooms and bathrooms into single feature column 
 
 
 ## Project Organization
@@ -172,10 +166,6 @@ DELIVERABLES:
 
 ## Delivery Stage
 DELIVERABLES: 
-- Presentation (3-5 Slides) in Google Slides
-- Additional Information Notebook
-  1. What state and county are these properties in?
-  2. What is the distribution of tax rates for each county?
-  3. What is the tax rate for each property?
-  4. How much does the tax rate vary by county?
-  5. What tax rate do the bulk of properties sit around?
+- [Presentation](https://docs.google.com/presentation/d/1O1oWwpjngXqnWylhtI1CFIcE8Nl13MardtJ5TaAJ7oo/edit?usp=sharing)
+- [Main_Notebook]()
+- [Additional_Information]()
