@@ -10,6 +10,7 @@ from sklearn.preprocessing import StandardScaler, QuantileTransformer, PowerTran
 #################### Prepare ##################
 
 def wrangle_zillow(path):
+    '''This function makes all necessary changes to the dataframe for exploration and modeling'''
     df = pd.read_csv(path)
     # Rename columns for clarity
     df.rename(columns={"hashottuborspa":"hottub_spa","fireplacecnt":"fireplace","garagecarcnt":"garage"}, inplace = True)
